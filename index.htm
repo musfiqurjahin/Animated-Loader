@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J Loader</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #0e0e0e;
+            font-family: 'Courier New', monospace;
+        }
+
+        .loader-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            font-size: 100px;
+            color: #00ffcc;
+            position: relative;
+            font-weight: bold;
+        }
+
+        .loader::before {
+            content: "J";
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #0e0e0e;
+            animation: reveal 2s linear infinite;
+        }
+
+        @keyframes reveal {
+            0% {
+                clip-path: inset(0 100% 0 0);
+            }
+            50% {
+                clip-path: inset(0 0 0 0);
+            }
+            100% {
+                clip-path: inset(0 0 0 100%);
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="loader-container">
+    <div class="loader">J</div>
+</div>
+
+<script>
+    // Optionally, you can add more JavaScript for interactivity or more dynamic effects.
+    // The animation is primarily controlled by CSS.
+</script>
+
+</body>
+</html>
